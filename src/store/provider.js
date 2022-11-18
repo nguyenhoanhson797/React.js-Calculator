@@ -3,6 +3,11 @@ import { createContext } from "react";
 
 const DataContext = createContext()
 
+const getLocalItems = () => {
+    const storageHistoryList = JSON.parse(localStorage.getItem('historyList'));
+    return storageHistoryList || [];
+}
+
 function DataProvider({ children }) {
 
     const [view, setView] = useState(false);
@@ -11,16 +16,8 @@ function DataProvider({ children }) {
     const [error, setError] = useState(false);
     const [blur, setBlur] = useState(false)
     const [save, setSave] = useState(false)
-
-    const [history, setHistory] = useState( () => {
-        const storageHistoryList = JSON.parse(localStorage.getItem('historyList'));
-        return storageHistoryList || [];
-    })
-
-    const [historyList, setHistoryList] = useState(() => {
-        const storageHistoryList = JSON.parse(localStorage.getItem('historyList'));
-        return storageHistoryList || [];
-    })
+    const [history, setHistory] = useState( getLocalItems())
+    const [historyList, setHistoryList] = useState(getLocalItems())
     
 
     const data = [view, input, result, error, history, setView, setInput, setResult, setError, setHistory, blur, setBlur, save, setSave, historyList, setHistoryList]

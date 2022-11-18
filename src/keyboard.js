@@ -6,6 +6,7 @@ import { ReactComponent as Minus } from './icon/minus.svg'
 import { ReactComponent as Multiply } from './icon/multi.svg'
 import { ReactComponent as Divide } from './icon/divide.svg'
 import { DataContext } from "./store/provider";
+import { type } from "@testing-library/user-event/dist/type";
 
 
 function Keyboard() {
@@ -18,11 +19,13 @@ function Keyboard() {
 // TODO Calculate handle
     const handleClick = (e) => {
         switch(true){
+            // 
             case e.target.className.includes('number'):
                 if (newInput){
                     setInput([input.splice(0,1)])
                     setNewInput(false)
-                    setHistory(result === 0 ? [...history] : [...history, result.toString()])
+                    setHistory(checkResult ? history : [...history, result.toString()])
+                    console.log('result', result, typeof result);
                     setSave(true)
                 }
                 if (error){
@@ -30,6 +33,7 @@ function Keyboard() {
                     setError(false)
                 }
                 setInput([...input, e.target.value].join(''))
+                
                 break;
 
             case e.target.className.includes('cal'):
@@ -63,8 +67,9 @@ function Keyboard() {
                 setInput([])
                 setResult(0)
                 setError(false)
-                setHistory(result === 0 ? [...history] : [...history, result.toString()])
+                setHistory(checkResult ? history : [...history, result.toString()])
                 setSave(true)
+                console.log('result', result, typeof result);
                 break;
 
             case e.target.id === 'equal':
@@ -75,7 +80,8 @@ function Keyboard() {
         }
     }
 // TODO Calculate handle
-
+    console.log('result', result, 'type', typeof result);
+    const checkResult = (result === 0 || isNaN(result) || result === 'Infinity' || result === Infinity || result === undefined || result === null || typeof result === 'object')
 
 // ! Error Handle
     useEffect(() => {
@@ -115,7 +121,7 @@ function Keyboard() {
                 <button className="cal" value={'+'}> <Plus/> </button>
             </div>
             <div className="row">
-                <button className="number" value={'7'}> 7 </button>
+                <button className="number" btn-type="number | clean | clean1" value={'7'}> 7 </button>
                 <button className="number" value={'8'}> 8 </button>
                 <button className="number" value={'9'}> 9 </button>
                 <button className="cal" value={'-'}> <Minus/> </button>

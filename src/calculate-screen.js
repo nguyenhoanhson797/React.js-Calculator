@@ -36,13 +36,10 @@ function Calculate(){
                 setHistoryList(JSON.parse(localStorage.getItem('historyList')))
                 setSave(true)
 
-                if (view){
-                    setView(false)
-                    setBlur(false)
-                } else {
-                    setView(true)
-                    setBlur(true)
-                }
+
+                setView(!view)
+                setBlur(!view)
+                    
             }
         }
 
@@ -59,7 +56,8 @@ function Calculate(){
             <div className="title">
                 <p> Calculator </p>
                 <div className="history-show">
-                    <Historyico/>
+
+                    <Historyico  />
                 </div>
             </div>
             <div className="screen">

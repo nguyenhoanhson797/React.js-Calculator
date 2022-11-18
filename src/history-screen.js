@@ -28,13 +28,14 @@ function History(){
             if (e.target.className === 'editButton'){
                 const edit = prompt('Edit this result')
                 const index = e.target.id.substr(4)
-                console.log(index);
 
                 if (!isNaN(edit)) {
-                    // document.querySelector(`.history-item.item-${index}`).innerText = edit
-                    history.splice(index, 1, `${edit}`)
-                    setHistoryList(history)
-                    setSave(true)
+                    if(edit == null || edit == undefined || edit === ''){
+                    }else{
+                        history.splice(index, 1, `${edit}`)
+                        setHistoryList(history)
+                        setSave(true)
+                    }                          
                 }
             }
 
@@ -51,7 +52,7 @@ function History(){
         return () => {
             window.removeEventListener('click', handleCLick)
         }
-    }, [history]) // for edit
+    }, [history])
 
     
 // History handle
