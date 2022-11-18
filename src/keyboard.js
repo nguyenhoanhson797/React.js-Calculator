@@ -80,7 +80,8 @@ function Keyboard() {
         }
     }
 // TODO Calculate handle
-    console.log('result', result, 'type', typeof result);
+
+    // Check if the result is valid
     const checkResult = (result === 0 || isNaN(result) || result === 'Infinity' || result === Infinity || result === undefined || result === null || typeof result === 'object')
 
 // ! Error Handle
@@ -113,7 +114,7 @@ function Keyboard() {
  
 
     return (
-        <div className="keyboard" onClick={handleClick} >
+        <div className="keyboard" onClick={handleClick}>
             <div className="row">
                 <button id="reset"> Reset </button>
                 <button id="clean"> C </button>
@@ -147,8 +148,5 @@ function Keyboard() {
         </div>
     )
 }
-
-
-
 
 export default Keyboard;

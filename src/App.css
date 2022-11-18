@@ -167,8 +167,16 @@
   padding: 6px 12px;
   display: flex;
   flex-direction: column;
+  gap: 4px;
+  overflow: hidden;
   align-items: flex-end;
-  gap: 4px
+}
+
+.number-container{
+  display: flex;
+  justify-content: flex-end;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .error-field{
@@ -188,7 +196,6 @@
 .result{
   height: 22px;
   font-size: 20px;
-  /* font-weight: bold; */
 }
 
 .history-show{

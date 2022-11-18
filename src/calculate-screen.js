@@ -35,11 +35,8 @@ function Calculate(){
             if(e.target.className === 'history-show'){
                 setHistoryList(JSON.parse(localStorage.getItem('historyList')))
                 setSave(true)
-
-
                 setView(!view)
-                setBlur(!view)
-                    
+                setBlur(!view)                  
             }
         }
 
@@ -62,8 +59,16 @@ function Calculate(){
             </div>
             <div className="screen">
                 <p className="error-field"> {showError} </p>
-                <div className="showField"> {input} </div>
-                <div className="result"> {result} </div>
+                <div className="number-container"> 
+                    <p className="showField">
+                        {input}
+                    </p> 
+                </div>
+                <div className="number-container"> 
+                    <p className="result">
+                        {result}
+                    </p> 
+                </div>
             </div>
         </div>
     )
