@@ -1,0 +1,13 @@
+.showField{
+    color: #5e5e5e;
+    font-size: 12px;
+    height: 16px;
+    margin-top: 4px;
+}
+
+.numberContainer{
+    display: flex;
+    justify-content: flex-end;
+    max-width: 100%;
+    overflow: hidden;
+}

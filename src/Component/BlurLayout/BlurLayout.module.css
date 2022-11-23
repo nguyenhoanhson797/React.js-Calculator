@@ -1,0 +1,19 @@
+.blurLayout{
+    width: 260px;
+    height: 400px;
+    transition: 0.3s ease-out;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    z-index: 1000;
+}
+  
+.blurLayout.show{
+    background-color: rgba(0,0,0, 0.2);
+    backdrop-filter: blur(6px);
+}
+  
+.blurLayout.hide{
+    background-color: rgba(200,200,200, 0);
+}

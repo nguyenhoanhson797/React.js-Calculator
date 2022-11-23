@@ -1,0 +1,28 @@
+.historyField{
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+    height: max-content;
+    background-color: #FFFFFF;
+    position: absolute;
+    left: 0px;
+    border-radius: 8px;
+    transition: 0.2s ease-out;
+    padding: 8px;
+    box-sizing: border-box;
+    gap: 26px;
+    z-index: 9999;
+}
+  
+.historyField.show{
+    bottom: 0px;
+}
+  
+.historyField.hide{
+    bottom: -260px;
+}
+
+/* .historyField.show.popup{
+    bottom: -100px;
+} */
+

@@ -1,0 +1,15 @@
+.trash{
+    cursor: pointer;
+}
+  
+.trash svg{
+    pointer-events: none;
+}
+  
+.trash:hover svg path{
+    fill: #FDB935;
+}
+
+.trash:active svg path{
+    fill: #dea126;
+}

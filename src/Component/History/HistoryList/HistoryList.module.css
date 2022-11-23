@@ -1,0 +1,46 @@
+.historyList{
+    height: 194px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: 0.2s ease-out;
+}
+  
+.historyListLeft{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.historyList ul li{
+    padding: 4px 8px;
+}
+  
+.historyList ul li:hover{
+    background-color: #ededed;
+}
+  
+.historyListRight{
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+}
+  
+.historyListRight svg{
+    pointer-events: none;
+}
+  
+.historyListRight div:hover svg path{
+    fill: #FDB935;
+}
+
+.itemList{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.historyList.popup{
+    height: 96px;
+}
+  

@@ -1,0 +1,20 @@
+.historyShow{
+    height: 20px;
+    cursor: pointer;
+    z-index: 9999;
+    position: absolute;
+    right: 8px;
+    top: 14px;
+}
+  
+.historyShow svg{
+    pointer-events: none;
+}
+  
+.historyShow:hover svg path{
+    fill: #FDB935;
+}
+
+.historyShow:active svg path{
+    fill: #dca129;
+}

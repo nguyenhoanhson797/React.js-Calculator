@@ -1,0 +1,61 @@
+*{
+    color: #404040;
+}
+
+.confirmPopup{
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 80px;
+    border-radius: 8px;
+    transition: 0.2s ease-out;
+}
+
+.confirmPopup.show{
+    display: flex;
+}
+
+.confirmPopup.hide{
+    display: none;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65%;
+}
+
+.confirmField{
+    display: flex;
+    height: 35%;
+    width: 100%;
+}
+
+.button{
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    border-top: 0.5px solid #8c8c8c46;
+}
+
+.delete{
+    color: white;
+    background-color: rgb(238, 115, 70);
+    border-radius: 0px 0px 0px 8px;
+}
+
+.delete:hover{
+    background-color: rgb(197, 96, 60);
+}
+
+.cancel{
+    border-radius: 0px 0px 8px 0px;
+    background-color: rgb(245, 245, 245);
+}
+
+.cancel:hover{
+    background-color: rgb(221, 221, 221);
+}

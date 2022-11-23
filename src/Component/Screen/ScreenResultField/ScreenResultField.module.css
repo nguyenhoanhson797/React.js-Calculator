@@ -1,0 +1,11 @@
+.result{
+    height: 22px;
+    font-size: 20px;
+}
+
+.numberContainer{
+    display: flex;
+    justify-content: flex-end;
+    max-width: 100%;
+    overflow: hidden;
+}

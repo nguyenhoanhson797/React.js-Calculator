@@ -1,0 +1,22 @@
+.popup{
+    /* background-color: bisque; */
+    width: 100%;
+    min-height: 120px;
+    position: absolute;
+    z-index: 9999;
+    transition: 0.2s ease-out;
+    left: 0px;
+    top: 100px;
+    padding: 12px 8px;
+    box-sizing: border-box;
+}
+
+.popup.show{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup.hide{
+    display: none;
+}

@@ -1,0 +1,74 @@
+.keyboard{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+  
+.keyboard .row{
+    display: flex;
+    gap: 4px;
+}
+  
+.keyboard button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 58px;
+    height: 40px;
+    background-color: white;
+    border: none;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.14);
+    border-radius: 4px;
+    color: #404040;
+    transition: 0.1s ease-out;
+    cursor: pointer;
+}
+  
+.keyboard button svg{
+    pointer-events: none;
+}
+  
+.keyboard button svg path{
+    pointer-events: none;
+    fill: #0085A6;
+}
+  
+.keyboard button.default svg path{
+    pointer-events: none;
+    fill: #404040;
+}
+  
+.keyboard button:active {
+    background-color: #F5F5F5 !important;
+    color: #808080 !important;
+    transform: translateY(0.5px);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14);
+}
+  
+.keyboard button:active svg path{
+    fill: #808080 !important;
+}
+  
+  .keyboard button:hover{
+    background-color: #f5f5f5;
+  }
+  
+.keyboard button.primary{
+    background-color: #0085A6;
+}
+  
+.keyboard button.primary svg path{
+    fill: #FFFFFF;
+}
+  
+.keyboard button.primary:hover{
+    background-color: #006A85;
+}
+  
+.keyboard button.primary:active{
+    background-color: #339DB8 !important;
+}
+  
+.keyboard button.primary:active svg path{
+    fill: #FFFFFF !important;
+}

@@ -1,0 +1,14 @@
+.historyNote{
+    height: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.historyNote p,input{
+    border: none;
+    font-size: 10px;
+    color: #616161;
+    height: 14px;
+    background-color: rgba(0, 0, 0, 0);
+}
+  
