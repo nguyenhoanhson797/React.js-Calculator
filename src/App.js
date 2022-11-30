@@ -15,17 +15,17 @@ function App() {
     return storageHistoryList || [];
   }
   
-  const [show, setShow] = useState(false)
-  const [showPopup, setShowPopup] = useState(false)
-  const [popupType, setPopupType] = useState('')
-  const [input, setInput] = useState([])
-  const [result, setResult] = useState(0);
-  const [error, setError] = useState(false);
-  const [save, setSave] = useState(false);
-  const [history, setHistory] = useState( getLocalItems() );
-  const [historyList, setHistoryList] = useState(getLocalItems() );
-  const [focus, setFocus] = useState(false)
-  const [itemIndex, setItemIndex] = useState()
+  const [show, setShow] = useState(false) // show history screen
+  const [showPopup, setShowPopup] = useState(false) // show pop-up
+  const [popupType, setPopupType] = useState('') // Call pop-up type
+  const [input, setInput] = useState([]) // set input field
+  const [result, setResult] = useState(0); // set result field
+  const [error, setError] = useState(false); // catch error
+  const [save, setSave] = useState(false); // set save state
+  const [history, setHistory] = useState( getLocalItems() ); // set list of history for saving to local storage
+  const [historyList, setHistoryList] = useState(getLocalItems() ); // get list of history from local storage
+  const [focus, setFocus] = useState(false) // set active state for keyboard pressing
+  const [itemIndex, setItemIndex] = useState() // 
 
   //Keep focus state active for keypress
   useEffect(() => {

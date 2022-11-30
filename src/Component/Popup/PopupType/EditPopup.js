@@ -55,8 +55,8 @@ function EditPopup({ history, setHistoryList, popupType, setShowPopup, setSave, 
     return(
         <div className={`${styles.editPopup} ${popupType === 'editPopup' ? styles.show : styles.hide}`}>
             <div className={styles.title}> Edit item </div>
-            <input id='editResultInput' className={`${styles.editBox} ${styles.resultBox}`} placeholder='Edit Result' onChange={handleEditResult}/>
-            <input id='editNoteInput' className={`${styles.editBox} ${styles.noteBox}`} placeholder='Edit Note' onChange={handleEditNote}/>
+            <input id='editResultInput' className={`${styles.editBox} ${styles.resultBox}`} placeholder='Edit Result' onChange={handleEditResult} autocomplete="off"/>
+            <input id='editNoteInput' className={`${styles.editBox} ${styles.noteBox}`} placeholder='Edit Note' onChange={handleEditNote} autocomplete="off"/>
             <div className={styles.btnField}>
                 <button className={`${styles.button} ${styles.save}`} onClick={handleSave}> Save </button>
                 <button className={`${styles.button} ${styles.cancel}`} onClick={handleCancel}> Cancel </button>
